@@ -1,0 +1,302 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1523E3D1507C4CC00AAD412 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1523E3C1507C4CC00AAD412 /* UIKit.framework */; };
+		A1523E3F1507C4CC00AAD412 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1523E3E1507C4CC00AAD412 /* Foundation.framework */; };
+		A1523E411507C4CC00AAD412 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1523E401507C4CC00AAD412 /* CoreGraphics.framework */; };
+		A1523E471507C4CC00AAD412 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1523E451507C4CC00AAD412 /* InfoPlist.strings */; };
+		A1523E491507C4CC00AAD412 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1523E481507C4CC00AAD412 /* main.m */; };
+		A1523E4D1507C4CC00AAD412 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1523E4C1507C4CC00AAD412 /* AppDelegate.m */; };
+		A1523E501507C4CC00AAD412 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1523E4E1507C4CC00AAD412 /* MainStoryboard_iPhone.storyboard */; };
+		A1523E531507C4CC00AAD412 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1523E511507C4CC00AAD412 /* MainStoryboard_iPad.storyboard */; };
+		A1523E561507C4CC00AAD412 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1523E551507C4CC00AAD412 /* MasterViewController.m */; };
+		A1523E591507C4CC00AAD412 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1523E581507C4CC00AAD412 /* DetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A1523E381507C4CC00AAD412 /* ContactViewerIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactViewerIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1523E3C1507C4CC00AAD412 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A1523E3E1507C4CC00AAD412 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A1523E401507C4CC00AAD412 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A1523E441507C4CC00AAD412 /* ContactViewerIos-Info.plist */ = {isa = PBXFileReference; path = "ContactViewerIos-Info.plist"; sourceTree = "<group>"; };
+		A1523E461507C4CC00AAD412 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A1523E481507C4CC00AAD412 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A1523E4A1507C4CC00AAD412 /* ContactViewerIos-Prefix.pch */ = {isa = PBXFileReference; path = "ContactViewerIos-Prefix.pch"; sourceTree = "<group>"; };
+		A1523E4B1507C4CC00AAD412 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		A1523E4C1507C4CC00AAD412 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A1523E4F1507C4CC00AAD412 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		A1523E521507C4CC00AAD412 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		A1523E541507C4CC00AAD412 /* MasterViewController.h */ = {isa = PBXFileReference; path = MasterViewController.h; sourceTree = "<group>"; };
+		A1523E551507C4CC00AAD412 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		A1523E571507C4CC00AAD412 /* DetailViewController.h */ = {isa = PBXFileReference; path = DetailViewController.h; sourceTree = "<group>"; };
+		A1523E581507C4CC00AAD412 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1523E351507C4CC00AAD412 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1523E3D1507C4CC00AAD412 /* UIKit.framework in Frameworks */,
+				A1523E3F1507C4CC00AAD412 /* Foundation.framework in Frameworks */,
+				A1523E411507C4CC00AAD412 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1523E2D1507C4CB00AAD412 = {
+			isa = PBXGroup;
+			children = (
+				A1523E421507C4CC00AAD412 /* ContactViewerIos */,
+				A1523E3B1507C4CC00AAD412 /* Frameworks */,
+				A1523E391507C4CC00AAD412 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A1523E391507C4CC00AAD412 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1523E381507C4CC00AAD412 /* ContactViewerIos.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1523E3B1507C4CC00AAD412 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1523E3C1507C4CC00AAD412 /* UIKit.framework */,
+				A1523E3E1507C4CC00AAD412 /* Foundation.framework */,
+				A1523E401507C4CC00AAD412 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A1523E421507C4CC00AAD412 /* ContactViewerIos */ = {
+			isa = PBXGroup;
+			children = (
+				A1523E4B1507C4CC00AAD412 /* AppDelegate.h */,
+				A1523E4C1507C4CC00AAD412 /* AppDelegate.m */,
+				A1523E4E1507C4CC00AAD412 /* MainStoryboard_iPhone.storyboard */,
+				A1523E511507C4CC00AAD412 /* MainStoryboard_iPad.storyboard */,
+				A1523E541507C4CC00AAD412 /* MasterViewController.h */,
+				A1523E551507C4CC00AAD412 /* MasterViewController.m */,
+				A1523E571507C4CC00AAD412 /* DetailViewController.h */,
+				A1523E581507C4CC00AAD412 /* DetailViewController.m */,
+				A1523E431507C4CC00AAD412 /* Supporting Files */,
+			);
+			path = ContactViewerIos;
+			sourceTree = "<group>";
+		};
+		A1523E431507C4CC00AAD412 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1523E441507C4CC00AAD412 /* ContactViewerIos-Info.plist */,
+				A1523E451507C4CC00AAD412 /* InfoPlist.strings */,
+				A1523E481507C4CC00AAD412 /* main.m */,
+				A1523E4A1507C4CC00AAD412 /* ContactViewerIos-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1523E371507C4CC00AAD412 /* ContactViewerIos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1523E5C1507C4CC00AAD412 /* Build configuration list for PBXNativeTarget "ContactViewerIos" */;
+			buildPhases = (
+				A1523E341507C4CC00AAD412 /* Sources */,
+				A1523E351507C4CC00AAD412 /* Frameworks */,
+				A1523E361507C4CC00AAD412 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ContactViewerIos;
+			productName = ContactViewerIos;
+			productReference = A1523E381507C4CC00AAD412 /* ContactViewerIos.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1523E2F1507C4CB00AAD412 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Tiny Mission";
+			};
+			buildConfigurationList = A1523E321507C4CB00AAD412 /* Build configuration list for PBXProject "ContactViewerIos" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A1523E2D1507C4CB00AAD412;
+			productRefGroup = A1523E391507C4CC00AAD412 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1523E371507C4CC00AAD412 /* ContactViewerIos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1523E361507C4CC00AAD412 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1523E471507C4CC00AAD412 /* InfoPlist.strings in Resources */,
+				A1523E501507C4CC00AAD412 /* MainStoryboard_iPhone.storyboard in Resources */,
+				A1523E531507C4CC00AAD412 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1523E341507C4CC00AAD412 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1523E491507C4CC00AAD412 /* main.m in Sources */,
+				A1523E4D1507C4CC00AAD412 /* AppDelegate.m in Sources */,
+				A1523E561507C4CC00AAD412 /* MasterViewController.m in Sources */,
+				A1523E591507C4CC00AAD412 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A1523E451507C4CC00AAD412 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1523E461507C4CC00AAD412 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A1523E4E1507C4CC00AAD412 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1523E4F1507C4CC00AAD412 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		A1523E511507C4CC00AAD412 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1523E521507C4CC00AAD412 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A1523E5A1507C4CC00AAD412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1523E5B1507C4CC00AAD412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1523E5D1507C4CC00AAD412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ContactViewerIos/ContactViewerIos-Prefix.pch";
+				INFOPLIST_FILE = "ContactViewerIos/ContactViewerIos-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A1523E5E1507C4CC00AAD412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ContactViewerIos/ContactViewerIos-Prefix.pch";
+				INFOPLIST_FILE = "ContactViewerIos/ContactViewerIos-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1523E321507C4CB00AAD412 /* Build configuration list for PBXProject "ContactViewerIos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1523E5A1507C4CC00AAD412 /* Debug */,
+				A1523E5B1507C4CC00AAD412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1523E5C1507C4CC00AAD412 /* Build configuration list for PBXNativeTarget "ContactViewerIos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1523E5D1507C4CC00AAD412 /* Debug */,
+				A1523E5E1507C4CC00AAD412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A1523E2F1507C4CB00AAD412 /* Project object */;
+}

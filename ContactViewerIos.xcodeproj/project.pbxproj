@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		420FBCFA150C15CC004561BF /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 420FBCF9150C15CC004561BF /* logo.png */; };
+		42069458150C58C700AE1BDA /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42069457150C58C700AE1BDA /* logo.png */; };
 		A1523E3D1507C4CC00AAD412 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1523E3C1507C4CC00AAD412 /* UIKit.framework */; };
 		A1523E3F1507C4CC00AAD412 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1523E3E1507C4CC00AAD412 /* Foundation.framework */; };
 		A1523E411507C4CC00AAD412 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1523E401507C4CC00AAD412 /* CoreGraphics.framework */; };
@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		420FBCF9150C15CC004561BF /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = "../../Documents/workspace/ContactViewer/res/drawable-mdpi/logo.png"; sourceTree = "<group>"; };
+		42069457150C58C700AE1BDA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = images/logo.png; sourceTree = "<group>"; };
 		A1523E381507C4CC00AAD412 /* ContactViewerIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactViewerIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1523E3C1507C4CC00AAD412 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A1523E3E1507C4CC00AAD412 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,7 +63,7 @@
 		420FBCF7150C1579004561BF /* images */ = {
 			isa = PBXGroup;
 			children = (
-				420FBCF9150C15CC004561BF /* logo.png */,
+				42069457150C58C700AE1BDA /* logo.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -181,7 +181,7 @@
 				A1523E471507C4CC00AAD412 /* InfoPlist.strings in Resources */,
 				A1523E501507C4CC00AAD412 /* MainStoryboard_iPhone.storyboard in Resources */,
 				A1523E531507C4CC00AAD412 /* MainStoryboard_iPad.storyboard in Resources */,
-				420FBCFA150C15CC004561BF /* logo.png in Resources */,
+				42069458150C58C700AE1BDA /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,12 +10,19 @@
 
 #import "DetailViewController.h"
 
+#import "Contact.h"
+
 @implementation MasterViewController
 
 @synthesize detailViewController = _detailViewController;
+@synthesize contacts;
 
 - (void)awakeFromNib
 {
+    // get the contact list
+    [ContactList initSingleton];
+    contacts = [ContactList singleton];
+    
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         self.clearsSelectionOnViewWillAppear = NO;
         self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
@@ -29,6 +36,7 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
@@ -36,6 +44,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
     }
@@ -78,14 +87,57 @@
     }
 }
 
-/*
+
+#pragma mark - Table View Data Source
+
+-(IBAction)onAddContact:(id)sender {
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"New Contact"
+                                                    message:@"You need to do something here"
+                                                   delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+    [alert show];
+}
+
+
+#pragma mark - Table View Data Source
+
+-(int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [contacts count];
+}
+
+-(int)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    // get or create the cell
+    static NSString *CellIdentifier = @"ContactCell";
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	if (cell == nil) {
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+	}
+    
+    // set the content in the cell based on the contact
+    Contact* contact = [contacts contactAtIndex:indexPath.row];
+    cell.textLabel.text = contact.name;
+    // this is a bit of a hack, but now we don't need to make a custom cell item
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@            %@", 
+                                 contact.phone, contact.title];
+    
+    return cell;
+}
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.detailViewController.detailItem = [contacts contactAtIndex:indexPath.row];
+}
+
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
 /*
 // Override to support editing the table view.

@@ -139,9 +139,6 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.detailViewController.detailItem = [contacts contactAtIndex:indexPath.row];
-    
-    // Pass any objects to the view controller here, like...
-    detailViewController.detailItem = [[contacts contactAtIndex:indexPath.row] name];
 }
 
 

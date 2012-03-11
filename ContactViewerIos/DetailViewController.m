@@ -18,12 +18,16 @@
 @implementation DetailViewController
 
 @synthesize detailItem; // = _detailItem;
-@synthesize detailDescriptionLabel = _detailDescriptionLabel;
+@synthesize nameLabel = _nameLabel;
+@synthesize titleLabel = _titleLabel;
+@synthesize cellTextField = _cellTextField;
+@synthesize emailTextField = _emailTextField;
+@synthesize twitterIDTextField = _twitterIDTextField;
 @synthesize masterPopoverController = _masterPopoverController;
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
+- (void)setDetailItem:(Contact*)newDetailItem
 {
     if (detailItem != newDetailItem) {
         detailItem = newDetailItem;
@@ -42,7 +46,11 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        self.nameLabel.text = [self.detailItem name];
+        self.titleLabel.text = [NSString stringWithFormat: @"%@ ", [self.detailItem title]];
+        self.cellTextField.text = [self.detailItem phone];
+        self.emailTextField.text = [self.detailItem email];
+        self.twitterIDTextField.text = [self.detailItem twitterId];
     }
 }
 
@@ -63,6 +71,7 @@
 
 - (void)viewDidUnload
 {
+    [self setCellTextField:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

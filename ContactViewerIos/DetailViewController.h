@@ -14,4 +14,7 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 
+@property (strong, nonatomic) UIPopoverController *masterPopoverController;
+- (void)configureView;
+
 @end

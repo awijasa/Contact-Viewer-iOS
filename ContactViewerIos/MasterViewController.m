@@ -14,7 +14,7 @@
 
 @implementation MasterViewController
 
-@synthesize detailViewController = _detailViewController;
+@synthesize detailViewController;
 @synthesize contacts;
 
 - (void)awakeFromNib
@@ -38,6 +38,16 @@
 
 
 #pragma mark - View lifecycle
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:@"ContactViewerToDetail"])
+    {
+        // Get reference to the destination view controller
+        detailViewController = [segue destinationViewController];
+    }
+}
 
 - (void)viewDidLoad
 {
@@ -129,6 +139,9 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.detailViewController.detailItem = [contacts contactAtIndex:indexPath.row];
+    
+    // Pass any objects to the view controller here, like...
+    detailViewController.detailItem = [[contacts contactAtIndex:indexPath.row] name];
 }
 
 

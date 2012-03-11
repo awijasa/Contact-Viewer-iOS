@@ -8,14 +8,16 @@
 
 #import "DetailViewController.h"
 
+/*
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
 @end
+ */
 
 @implementation DetailViewController
 
-@synthesize detailItem = _detailItem;
+@synthesize detailItem; // = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
 @synthesize masterPopoverController = _masterPopoverController;
 
@@ -23,8 +25,8 @@
 
 - (void)setDetailItem:(id)newDetailItem
 {
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
+    if (detailItem != newDetailItem) {
+        detailItem = newDetailItem;
         
         // Update the view.
         [self configureView];

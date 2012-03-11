@@ -153,6 +153,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Contact Detail" id="26">
                         <barButtonItem key="backBarButtonItem" title="Home" id="UiG-4M-9we"/>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Pmf-8l-9Am"/>
                     </navigationItem>
                     <connections>
                         <outlet property="detailDescriptionLabel" destination="27" id="28"/>
@@ -165,6 +166,20 @@
     <resources>
         <image name="logo.png" width="320" height="160"/>
     </resources>
+    <classes>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="MasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="onAddContact:"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

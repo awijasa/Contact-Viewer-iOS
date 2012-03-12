@@ -70,7 +70,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
     
-    self.navigationController.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(Add)] autoContentAccessingProxy];
+    self.navigationController.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(Add)] autoContentAccessingProxy ];
     
     
     

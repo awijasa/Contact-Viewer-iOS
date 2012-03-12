@@ -64,9 +64,22 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+    
+    
+    //[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    
+    self.navigationController.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(Add)] autoContentAccessingProxy];
+    
+    
+    
+}
+
+-(IBAction)Add:(id)sender
+{
+    self.nameLabel.userInteractionEnabled = TRUE;
+    [self.nameLabel becomeFirstResponder];
 }
 
 - (void)viewDidUnload

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		42069458150C58C700AE1BDA /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42069457150C58C700AE1BDA /* logo.png */; };
+		42160F4F150EC29800E9877A /* ContactEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 42160F4E150EC29800E9877A /* ContactEntity.m */; };
 		4227E43A150D98AE00A80FDD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4227E439150D98AE00A80FDD /* CoreData.framework */; };
 		426CB024150D998000E2B4E8 /* ContactViewerIos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 426CB022150D998000E2B4E8 /* ContactViewerIos.xcdatamodeld */; };
 		A1523E3D1507C4CC00AAD412 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1523E3C1507C4CC00AAD412 /* UIKit.framework */; };
@@ -26,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		42069457150C58C700AE1BDA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = images/logo.png; sourceTree = "<group>"; };
+		42160F4D150EC29800E9877A /* ContactEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactEntity.h; sourceTree = "<group>"; };
+		42160F4E150EC29800E9877A /* ContactEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactEntity.m; sourceTree = "<group>"; };
 		4227E439150D98AE00A80FDD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		426CB023150D998000E2B4E8 /* ContactViewerIos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactViewerIos.xcdatamodel; sourceTree = "<group>"; };
 		A1523E381507C4CC00AAD412 /* ContactViewerIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactViewerIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				426CB022150D998000E2B4E8 /* ContactViewerIos.xcdatamodeld */,
+				42160F4D150EC29800E9877A /* ContactEntity.h */,
+				42160F4E150EC29800E9877A /* ContactEntity.m */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 				A1523E611507D37A00AAD412 /* Contact.m in Sources */,
 				A17B9CE81507DB7D00DE386B /* ContactList.m in Sources */,
 				426CB024150D998000E2B4E8 /* ContactViewerIos.xcdatamodeld in Sources */,
+				42160F4F150EC29800E9877A /* ContactEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

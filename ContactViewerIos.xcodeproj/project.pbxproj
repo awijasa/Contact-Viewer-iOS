@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		42069458150C58C700AE1BDA /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42069457150C58C700AE1BDA /* logo.png */; };
+		4213CD02150EFC27004CA666 /* NewContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4213CD01150EFC26004CA666 /* NewContactViewController.m */; };
 		42160F4F150EC29800E9877A /* ContactEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 42160F4E150EC29800E9877A /* ContactEntity.m */; };
 		4227E43A150D98AE00A80FDD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4227E439150D98AE00A80FDD /* CoreData.framework */; };
 		426CB024150D998000E2B4E8 /* ContactViewerIos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 426CB022150D998000E2B4E8 /* ContactViewerIos.xcdatamodeld */; };
@@ -27,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		42069457150C58C700AE1BDA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = images/logo.png; sourceTree = "<group>"; };
+		4213CD00150EFC26004CA666 /* NewContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewContactViewController.h; sourceTree = "<group>"; };
+		4213CD01150EFC26004CA666 /* NewContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewContactViewController.m; sourceTree = "<group>"; };
 		42160F4D150EC29800E9877A /* ContactEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactEntity.h; sourceTree = "<group>"; };
 		42160F4E150EC29800E9877A /* ContactEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactEntity.m; sourceTree = "<group>"; };
 		4227E439150D98AE00A80FDD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -132,6 +135,8 @@
 				A1523E601507D37A00AAD412 /* Contact.m */,
 				A17B9CE61507DB7D00DE386B /* ContactList.h */,
 				A17B9CE71507DB7D00DE386B /* ContactList.m */,
+				4213CD00150EFC26004CA666 /* NewContactViewController.h */,
+				4213CD01150EFC26004CA666 /* NewContactViewController.m */,
 			);
 			path = ContactViewerIos;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 				A17B9CE81507DB7D00DE386B /* ContactList.m in Sources */,
 				426CB024150D998000E2B4E8 /* ContactViewerIos.xcdatamodeld in Sources */,
 				42160F4F150EC29800E9877A /* ContactEntity.m in Sources */,
+				4213CD02150EFC27004CA666 /* NewContactViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

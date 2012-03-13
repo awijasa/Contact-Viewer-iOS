@@ -14,6 +14,11 @@ static ContactList* _singleton = nil;
 
 @synthesize allContacts=_contacts;
 
+-(id)init {
+    self = [super init];
+    _contacts = [[NSMutableArray alloc] init];
+    return self;
+}
 
 -(id)initWithCapacity:(NSInteger)capacity {
     self = [super init];

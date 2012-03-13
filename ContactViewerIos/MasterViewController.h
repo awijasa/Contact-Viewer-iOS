@@ -9,14 +9,17 @@
 #import <UIKit/UIKit.h>
 
 #import "ContactList.h"
-
-@class DetailViewController;
+#import "DetailViewController.h"
 
 @interface MasterViewController : UITableViewController <UITableViewDataSource>
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
 
-@property (strong, nonatomic) ContactList* contacts;
+@property (nonatomic, retain) NSMutableArray *contacts;
+
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+
+@property int lastKnownContactCount;
 
 // this gets called when the user taps the plus button above the list
 -(IBAction)onAddContact:(id)sender;

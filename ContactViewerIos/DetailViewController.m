@@ -27,7 +27,7 @@
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(Contact*)newDetailItem
+- (void)setDetailItem:(ContactEntity*)newDetailItem
 {
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;

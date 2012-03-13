@@ -7,12 +7,23 @@
 //
 
 #import "NewContactViewController.h"
+#import "AppDelegate.h"
+#import "ContactEntity.h"
+#import "DetailViewController.h"
 
 @implementation NewContactViewController
 
 @synthesize scrollView;
 @synthesize activeField;
+@synthesize nameTextField;
+@synthesize titleTextField;
+@synthesize phoneTextField;
+@synthesize emailTextField;
+@synthesize twitterIdTextField;
 @synthesize controlView;
+@synthesize managedObjectContext;
+@synthesize detailViewController;
+@synthesize contact = _contact;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +40,42 @@
     [super didReceiveMemoryWarning];
     
     // Release any cached data, images, etc that aren't in use.
+}
+
+- (void)addContactEntity {
+
+    // Create and configure a new instance of the Contact entity.
+    if (managedObjectContext == nil) 
+    { 
+        managedObjectContext = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    }
+    
+    _contact = (ContactEntity *)[NSEntityDescription insertNewObjectForEntityForName:@"ContactEntity" inManagedObjectContext:managedObjectContext];
+    
+    [_contact setName: [nameTextField text]];
+    [_contact setTitle: [titleTextField text]];
+    [_contact setPhone: [phoneTextField text]];
+    [_contact setEmail: [emailTextField text]];
+    [_contact setTwitterId: [twitterIdTextField text]];
+    
+    NSError *error = nil;
+    if (![managedObjectContext save:&error]) {
+        // Handle the error.
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:@"NewContactToDetail"])
+    {
+        // Get reference to the destination view controller
+        detailViewController = [segue destinationViewController];
+    }
+    
+    [self addContactEntity];
+    
+    self.detailViewController.detailItem = _contact;
 }
 
 // Call this method somewhere in your view controller setup code.

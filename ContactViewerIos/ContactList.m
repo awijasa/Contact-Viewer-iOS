@@ -27,7 +27,7 @@ static ContactList* _singleton = nil;
 }
 
 +(void)initSingleton {
-    _singleton = [[ContactList alloc] initWithCapacity:8];
+    _singleton = [[ContactList alloc] init];
     
    [_singleton addContact:[[Contact alloc] initWithName:@"Malcom Reynolds"
                                             andPhone:@"612-555-1234"

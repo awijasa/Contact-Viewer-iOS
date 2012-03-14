@@ -12,7 +12,7 @@
 		42160F4F150EC29800E9877A /* ContactEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 42160F4E150EC29800E9877A /* ContactEntity.m */; };
 		4227E43A150D98AE00A80FDD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4227E439150D98AE00A80FDD /* CoreData.framework */; };
 		426CB024150D998000E2B4E8 /* ContactViewerIos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 426CB022150D998000E2B4E8 /* ContactViewerIos.xcdatamodeld */; };
-		42CAE574150FDF5400E47723 /* PopSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CAE573150FDF5400E47723 /* PopSegue.m */; };
+		42CAE574150FDF5400E47723 /* PopSegueToMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CAE573150FDF5400E47723 /* PopSegueToMasterViewController.m */; };
 		A1523E3D1507C4CC00AAD412 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1523E3C1507C4CC00AAD412 /* UIKit.framework */; };
 		A1523E3F1507C4CC00AAD412 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1523E3E1507C4CC00AAD412 /* Foundation.framework */; };
 		A1523E411507C4CC00AAD412 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1523E401507C4CC00AAD412 /* CoreGraphics.framework */; };
@@ -35,8 +35,8 @@
 		42160F4E150EC29800E9877A /* ContactEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactEntity.m; sourceTree = "<group>"; };
 		4227E439150D98AE00A80FDD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		426CB023150D998000E2B4E8 /* ContactViewerIos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactViewerIos.xcdatamodel; sourceTree = "<group>"; };
-		42CAE572150FDF5400E47723 /* PopSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopSegue.h; sourceTree = "<group>"; };
-		42CAE573150FDF5400E47723 /* PopSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopSegue.m; sourceTree = "<group>"; };
+		42CAE572150FDF5400E47723 /* PopSegueToMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopSegueToMasterViewController.h; sourceTree = "<group>"; };
+		42CAE573150FDF5400E47723 /* PopSegueToMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopSegueToMasterViewController.m; sourceTree = "<group>"; };
 		A1523E381507C4CC00AAD412 /* ContactViewerIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactViewerIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1523E3C1507C4CC00AAD412 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A1523E3E1507C4CC00AAD412 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -140,8 +140,8 @@
 				A17B9CE71507DB7D00DE386B /* ContactList.m */,
 				4213CD00150EFC26004CA666 /* NewContactViewController.h */,
 				4213CD01150EFC26004CA666 /* NewContactViewController.m */,
-				42CAE572150FDF5400E47723 /* PopSegue.h */,
-				42CAE573150FDF5400E47723 /* PopSegue.m */,
+				42CAE572150FDF5400E47723 /* PopSegueToMasterViewController.h */,
+				42CAE573150FDF5400E47723 /* PopSegueToMasterViewController.m */,
 			);
 			path = ContactViewerIos;
 			sourceTree = "<group>";
@@ -231,7 +231,7 @@
 				426CB024150D998000E2B4E8 /* ContactViewerIos.xcdatamodeld in Sources */,
 				42160F4F150EC29800E9877A /* ContactEntity.m in Sources */,
 				4213CD02150EFC27004CA666 /* NewContactViewController.m in Sources */,
-				42CAE574150FDF5400E47723 /* PopSegue.m in Sources */,
+				42CAE574150FDF5400E47723 /* PopSegueToMasterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

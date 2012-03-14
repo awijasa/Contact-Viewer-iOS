@@ -82,20 +82,124 @@
         <scene sceneID="nCN-YR-nCC">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSj-kD-jR3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="LAT-sK-hws" sceneMemberID="viewController">
+                <viewController id="LAT-sK-hws" customClass="NewContactViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N6O-2M-wHS">
                         <rect key="frame" x="0.0" y="64" width="320" height="372"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" contentMode="scaleToFill" id="CLG-5E-Qrb">
+                                <rect key="frame" x="0.0" y="-186" width="322" height="558"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="xon-zZ-Qlb" customClass="UIControl">
+                                        <rect key="frame" x="3" y="186" width="317" height="372"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" id="bLD-77-DUI">
+                                                <rect key="frame" x="17" y="217" width="280" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                <connections>
+                                                    <action selector="textFieldDIdEndEditing:" destination="LAT-sK-hws" eventType="editingDidEnd" id="yDE-r7-rsV"/>
+                                                    <action selector="textFieldDidBeginEditing:" destination="LAT-sK-hws" eventType="editingDidBegin" id="QCa-4Z-g6W"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Email (Personal)" lineBreakMode="tailTruncation" minimumFontSize="10" id="Tbo-BL-d8b">
+                                                <rect key="frame" x="17" y="178" width="280" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Twitter ID" lineBreakMode="tailTruncation" minimumFontSize="10" id="gzl-jq-IeD">
+                                                <rect key="frame" x="17" y="256" width="280" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" id="3EI-YL-PoL">
+                                                <rect key="frame" x="17" y="295" width="280" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="textFieldDIdEndEditing:" destination="LAT-sK-hws" eventType="editingDidEnd" id="izJ-H8-a1Q"/>
+                                                    <action selector="textFieldDidBeginEditing:" destination="LAT-sK-hws" eventType="editingDidBegin" id="UT2-sb-BTl"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" id="bcT-15-HQv">
+                                                <rect key="frame" x="17" y="139" width="280" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                <connections>
+                                                    <action selector="textFieldDIdEndEditing:" destination="LAT-sK-hws" eventType="editingDidEnd" id="Gun-p0-CTd"/>
+                                                    <action selector="textFieldDidBeginEditing:" destination="LAT-sK-hws" eventType="editingDidBegin" id="SOB-sL-L6b"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Phone (Cell)" lineBreakMode="tailTruncation" minimumFontSize="10" id="a3S-Ew-T21">
+                                                <rect key="frame" x="20" y="100" width="280" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" id="IBI-0L-iCx">
+                                                <rect key="frame" x="17" y="61" width="280" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="textFieldDIdEndEditing:" destination="LAT-sK-hws" eventType="editingDidEnd" id="dVf-2P-6qG"/>
+                                                    <action selector="textFieldDidBeginEditing:" destination="LAT-sK-hws" eventType="editingDidBegin" id="mWD-z2-qwJ"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" id="rwH-bQ-GsH">
+                                                <rect key="frame" x="17" y="20" width="280" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="textFieldDIdEndEditing:" destination="LAT-sK-hws" eventType="editingDidEnd" id="rwY-nc-FKn"/>
+                                                    <action selector="textFieldDidBeginEditing:" destination="LAT-sK-hws" eventType="editingDidBegin" id="pZf-QA-eH1"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="tapOnScreen:" destination="LAT-sK-hws" eventType="touchUpInside" id="C3t-E9-h40"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <gestureRecognizers/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="0.96195652173913038" green="0.84019125376306536" blue="0.47489544983487003" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="sgY-IZ-RTk">
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="txU-AF-bwR"/>
+                    <navigationItem key="navigationItem" title="New Contact" id="sgY-IZ-RTk">
+                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="txU-AF-bwR">
+                            <connections>
+                                <segue destination="21" kind="push" identifier="NewContactToDetail" id="YDf-Vj-5IT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="controlView" destination="xon-zZ-Qlb" id="1pL-oN-TB0"/>
+                        <outlet property="emailTextField" destination="bLD-77-DUI" id="KGG-TM-z0X"/>
+                        <outlet property="nameTextField" destination="rwH-bQ-GsH" id="ccQ-3P-Zsg"/>
+                        <outlet property="phoneTextField" destination="bcT-15-HQv" id="QbJ-GB-jJA"/>
+                        <outlet property="scrollView" destination="CLG-5E-Qrb" id="oeA-kb-v9a"/>
+                        <outlet property="titleTextField" destination="IBI-0L-iCx" id="u6F-j2-suv"/>
+                        <outlet property="twitterIdTextField" destination="3EI-YL-PoL" id="iJt-UO-ita"/>
+                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1199" y="-870"/>
+            <point key="canvasLocation" x="1319" y="-514"/>
         </scene>
         <scene sceneID="FXP-gv-W3g">
             <objects>
@@ -141,7 +245,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="27">
-                                <rect key="frame" x="20" y="20" width="280" height="46"/>
+                                <rect key="frame" x="20" y="19" width="280" height="46"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
@@ -199,6 +303,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Contact Detail" id="26">
                         <barButtonItem key="backBarButtonItem" title="Home" id="UiG-4M-9we"/>
+                        <barButtonItem key="leftBarButtonItem" title="Contact Viewer" id="n23-WJ-W2P">
+                            <connections>
+                                <segue destination="12" kind="custom" identifier="ContactDetailToViewer" customClass="PopSegueToMasterViewController" id="6A5-cR-Pcf"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="Pmf-8l-9Am"/>
                     </navigationItem>
                     <connections>
@@ -210,7 +319,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1314" y="64"/>
+            <point key="canvasLocation" x="1730" y="64"/>
         </scene>
     </scenes>
     <resources>
@@ -231,6 +340,18 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
             <relationships>
                 <relationship kind="action" name="onAddContact:"/>
+            </relationships>
+        </class>
+        <class className="NewContactViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewContactViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="controlView" candidateClass="UIControl"/>
+                <relationship kind="outlet" name="emailTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="phoneTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="titleTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="twitterIdTextField" candidateClass="UITextField"/>
             </relationships>
         </class>
     </classes>

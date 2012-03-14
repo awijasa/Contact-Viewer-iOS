@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Contact.h"
+#import "ContactEntity.h"
 
 @interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
 
-@property (strong, nonatomic) Contact* detailItem;
+@property (strong, nonatomic) ContactEntity* detailItem;
 
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 
@@ -24,6 +24,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *twitterIDTextField;
 
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
+
 - (void)configureView;
 
 @end

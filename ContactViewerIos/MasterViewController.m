@@ -10,18 +10,20 @@
 
 #import "DetailViewController.h"
 
-#import "Contact.h"
+#import "ContactEntity.h"
+
+#import "AppDelegate.h"
 
 @implementation MasterViewController
 
 @synthesize detailViewController;
 @synthesize contacts;
+@synthesize managedObjectContext;
+@synthesize lastKnownContactCount;
 
 - (void)awakeFromNib
 {
-    // get the contact list
-    [ContactList initSingleton];
-    contacts = [ContactList singleton];
+    lastKnownContactCount = -1;
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         self.clearsSelectionOnViewWillAppear = NO;
@@ -70,6 +72,35 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    if (managedObjectContext == nil) 
+    { 
+        managedObjectContext = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    }
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ContactEntity" inManagedObjectContext: [self managedObjectContext]];
+    [request setEntity:entity];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+    [request setSortDescriptors:sortDescriptors];
+    
+    NSError *error = nil;
+    NSMutableArray *mutableFetchResults = [[managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
+    if (mutableFetchResults == nil) {
+        // Handle the error.
+    }
+    
+    [self setContacts:mutableFetchResults];
+    
+    if( lastKnownContactCount == -1 ) {
+        lastKnownContactCount = [contacts count];
+    }
+    else if( lastKnownContactCount != [contacts count] ) {
+        [self.tableView reloadData];
+        lastKnownContactCount = [contacts count];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -107,7 +138,6 @@
     [alert show];
 }
 
-
 #pragma mark - Table View Data Source
 
 -(int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -127,7 +157,7 @@
 	}
     
     // set the content in the cell based on the contact
-    Contact* contact = [contacts contactAtIndex:indexPath.row];
+    ContactEntity* contact = [contacts objectAtIndex:indexPath.row];
     cell.textLabel.text = contact.name;
     // this is a bit of a hack, but now we don't need to make a custom cell item
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@            %@", 
@@ -138,7 +168,7 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.detailViewController.detailItem = [contacts contactAtIndex:indexPath.row];
+    self.detailViewController.detailItem = [contacts objectAtIndex:indexPath.row];
 }
 
 

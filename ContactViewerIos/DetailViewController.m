@@ -17,7 +17,7 @@
 
 @implementation DetailViewController
 
-@synthesize detailItem; // = _detailItem;
+@synthesize detailItem = _detailItem;
 @synthesize nameLabel = _nameLabel;
 @synthesize titleLabel = _titleLabel;
 @synthesize cellTextField = _cellTextField;
@@ -27,10 +27,10 @@
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(Contact*)newDetailItem
+- (void)setDetailItem:(ContactEntity*)newDetailItem
 {
-    if (detailItem != newDetailItem) {
-        detailItem = newDetailItem;
+    if (_detailItem != newDetailItem) {
+        _detailItem = newDetailItem;
         
         // Update the view.
         [self configureView];
@@ -45,12 +45,12 @@
 {
     // Update the user interface for the detail item.
 
-    if (self.detailItem) {
-        self.nameLabel.text = [self.detailItem name];
-        self.titleLabel.text = [NSString stringWithFormat: @"%@ ", [self.detailItem title]];
-        self.cellTextField.text = [self.detailItem phone];
-        self.emailTextField.text = [self.detailItem email];
-        self.twitterIDTextField.text = [self.detailItem twitterId];
+    if (_detailItem) {
+        self.nameLabel.text = [_detailItem name];
+        self.titleLabel.text = [NSString stringWithFormat: @"%@ ", [_detailItem title]];
+        self.cellTextField.text = [_detailItem phone];
+        self.emailTextField.text = [_detailItem email];
+        self.twitterIDTextField.text = [_detailItem twitterId];
     }
 }
 

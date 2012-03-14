@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		42069458150C58C700AE1BDA /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42069457150C58C700AE1BDA /* logo.png */; };
+		4213CD02150EFC27004CA666 /* NewContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4213CD01150EFC26004CA666 /* NewContactViewController.m */; };
+		42160F4F150EC29800E9877A /* ContactEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 42160F4E150EC29800E9877A /* ContactEntity.m */; };
+		4227E43A150D98AE00A80FDD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4227E439150D98AE00A80FDD /* CoreData.framework */; };
+		426CB024150D998000E2B4E8 /* ContactViewerIos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 426CB022150D998000E2B4E8 /* ContactViewerIos.xcdatamodeld */; };
+		42CAE574150FDF5400E47723 /* PopSegueToMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CAE573150FDF5400E47723 /* PopSegueToMasterViewController.m */; };
 		A1523E3D1507C4CC00AAD412 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1523E3C1507C4CC00AAD412 /* UIKit.framework */; };
 		A1523E3F1507C4CC00AAD412 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1523E3E1507C4CC00AAD412 /* Foundation.framework */; };
 		A1523E411507C4CC00AAD412 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1523E401507C4CC00AAD412 /* CoreGraphics.framework */; };
@@ -24,6 +29,14 @@
 
 /* Begin PBXFileReference section */
 		42069457150C58C700AE1BDA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = images/logo.png; sourceTree = "<group>"; };
+		4213CD00150EFC26004CA666 /* NewContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewContactViewController.h; sourceTree = "<group>"; };
+		4213CD01150EFC26004CA666 /* NewContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewContactViewController.m; sourceTree = "<group>"; };
+		42160F4D150EC29800E9877A /* ContactEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactEntity.h; sourceTree = "<group>"; };
+		42160F4E150EC29800E9877A /* ContactEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactEntity.m; sourceTree = "<group>"; };
+		4227E439150D98AE00A80FDD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		426CB023150D998000E2B4E8 /* ContactViewerIos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactViewerIos.xcdatamodel; sourceTree = "<group>"; };
+		42CAE572150FDF5400E47723 /* PopSegueToMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopSegueToMasterViewController.h; sourceTree = "<group>"; };
+		42CAE573150FDF5400E47723 /* PopSegueToMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopSegueToMasterViewController.m; sourceTree = "<group>"; };
 		A1523E381507C4CC00AAD412 /* ContactViewerIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactViewerIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1523E3C1507C4CC00AAD412 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A1523E3E1507C4CC00AAD412 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -54,6 +67,7 @@
 				A1523E3D1507C4CC00AAD412 /* UIKit.framework in Frameworks */,
 				A1523E3F1507C4CC00AAD412 /* Foundation.framework in Frameworks */,
 				A1523E411507C4CC00AAD412 /* CoreGraphics.framework in Frameworks */,
+				4227E43A150D98AE00A80FDD /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,9 +82,20 @@
 			name = images;
 			sourceTree = "<group>";
 		};
+		4227E43C150D98F500A80FDD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				426CB022150D998000E2B4E8 /* ContactViewerIos.xcdatamodeld */,
+				42160F4D150EC29800E9877A /* ContactEntity.h */,
+				42160F4E150EC29800E9877A /* ContactEntity.m */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		A1523E2D1507C4CB00AAD412 = {
 			isa = PBXGroup;
 			children = (
+				4227E43C150D98F500A80FDD /* Resources */,
 				A1523E421507C4CC00AAD412 /* ContactViewerIos */,
 				A1523E3B1507C4CC00AAD412 /* Frameworks */,
 				A1523E391507C4CC00AAD412 /* Products */,
@@ -88,6 +113,7 @@
 		A1523E3B1507C4CC00AAD412 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4227E439150D98AE00A80FDD /* CoreData.framework */,
 				A1523E3C1507C4CC00AAD412 /* UIKit.framework */,
 				A1523E3E1507C4CC00AAD412 /* Foundation.framework */,
 				A1523E401507C4CC00AAD412 /* CoreGraphics.framework */,
@@ -112,6 +138,10 @@
 				A1523E601507D37A00AAD412 /* Contact.m */,
 				A17B9CE61507DB7D00DE386B /* ContactList.h */,
 				A17B9CE71507DB7D00DE386B /* ContactList.m */,
+				4213CD00150EFC26004CA666 /* NewContactViewController.h */,
+				4213CD01150EFC26004CA666 /* NewContactViewController.m */,
+				42CAE572150FDF5400E47723 /* PopSegueToMasterViewController.h */,
+				42CAE573150FDF5400E47723 /* PopSegueToMasterViewController.m */,
 			);
 			path = ContactViewerIos;
 			sourceTree = "<group>";
@@ -198,6 +228,10 @@
 				A1523E591507C4CC00AAD412 /* DetailViewController.m in Sources */,
 				A1523E611507D37A00AAD412 /* Contact.m in Sources */,
 				A17B9CE81507DB7D00DE386B /* ContactList.m in Sources */,
+				426CB024150D998000E2B4E8 /* ContactViewerIos.xcdatamodeld in Sources */,
+				42160F4F150EC29800E9877A /* ContactEntity.m in Sources */,
+				4213CD02150EFC27004CA666 /* NewContactViewController.m in Sources */,
+				42CAE574150FDF5400E47723 /* PopSegueToMasterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +356,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		426CB022150D998000E2B4E8 /* ContactViewerIos.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				426CB023150D998000E2B4E8 /* ContactViewerIos.xcdatamodel */,
+			);
+			currentVersion = 426CB023150D998000E2B4E8 /* ContactViewerIos.xcdatamodel */;
+			path = ContactViewerIos.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A1523E2F1507C4CB00AAD412 /* Project object */;
 }

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ContactEntity.h"
-
+#import "NewContactViewController.h"
 @interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
 
 @property (strong, nonatomic) ContactEntity* detailItem;
@@ -23,7 +23,13 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *twitterIDTextField;
 
+@property (nonatomic,retain) NSManagedObjectContext *managedObjectContext;
+
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
+
+@property (strong, nonatomic) NewContactViewController *editContactViewController;
+
+//@property (nonatomic, retain) UIStoryboard *storyBoard;
 
 - (void)configureView;
 

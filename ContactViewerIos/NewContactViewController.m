@@ -66,25 +66,7 @@
     }
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Make sure your segue name in storyboard is the same as this line
-    if ([[segue identifier] isEqualToString:@"NewContactToDetail"])
-    {
-        // Get reference to the destination view controller
-        detailViewController = [segue destinationViewController];
-    }
-    if(isEdit!=true)
-    {
-        [self addContactEntity];
-    }
-    else {
-        [self editContactEntity];
-    }
-    self.detailViewController.detailItem = _contact;
-}
-
--(void) editContactEntity
+- (void) editContactEntity
 {
     // Create and configure a new instance of the Contact entity.
     if (managedObjectContext == nil) 
@@ -102,6 +84,24 @@
     if (![managedObjectContext save:&error]) {
         // Handle the error.
     }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:@"NewContactToDetail"])
+    {
+        // Get reference to the destination view controller
+        detailViewController = [segue destinationViewController];
+    }
+    if(isEdit!=true)
+    {
+        [self addContactEntity];
+    }
+    else {
+        [self editContactEntity];
+    }
+    self.detailViewController.detailItem = _contact;
 }
 
 // Call this method somewhere in your view controller setup code.

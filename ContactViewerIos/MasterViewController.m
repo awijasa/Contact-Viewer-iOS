@@ -94,13 +94,13 @@
     
     [self setContacts:mutableFetchResults];
     
-    if( lastKnownContactCount == -1 ) {
-        lastKnownContactCount = [contacts count];
-    }
-    else if( lastKnownContactCount != [contacts count] ) {
+//    if( lastKnownContactCount == -1 ) {
+//        lastKnownContactCount = [contacts count];
+//    }
+//    else if( lastKnownContactCount != [contacts count] ) {
         [self.tableView reloadData];
-        lastKnownContactCount = [contacts count];
-    }
+//        lastKnownContactCount = [contacts count];
+//    }
 }
 
 - (void)viewDidAppear:(BOOL)animated

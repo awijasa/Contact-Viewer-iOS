@@ -24,6 +24,7 @@
 @synthesize managedObjectContext;
 @synthesize detailViewController;
 @synthesize contact = _contact;
+@synthesize isEdit;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +34,7 @@
     }
     return self;
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -72,10 +74,34 @@
         // Get reference to the destination view controller
         detailViewController = [segue destinationViewController];
     }
-    
-    [self addContactEntity];
-    
+    if(isEdit!=true)
+    {
+        [self addContactEntity];
+    }
+    else {
+        [self editContactEntity];
+    }
     self.detailViewController.detailItem = _contact;
+}
+
+-(void) editContactEntity
+{
+    // Create and configure a new instance of the Contact entity.
+    if (managedObjectContext == nil) 
+    { 
+        managedObjectContext = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    }
+    
+    [_contact setName: [nameTextField text]];
+    [_contact setTitle: [titleTextField text]];
+    [_contact setPhone: [phoneTextField text]];
+    [_contact setEmail: [emailTextField text]];
+    [_contact setTwitterId: [twitterIdTextField text]];
+    
+    NSError *error = nil;
+    if (![managedObjectContext save:&error]) {
+        // Handle the error.
+    }
 }
 
 // Call this method somewhere in your view controller setup code.
@@ -144,7 +170,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    if(self.contact!=nil)
+    {
+        self.nameTextField.text = self.contact.name;
+        self.titleTextField.text = [NSString stringWithFormat: @"%@ ", self.contact.title];
+        self.phoneTextField.text = self.contact.phone;
+        self.emailTextField.text = self.contact.email;
+        self.twitterIdTextField.text = self.contact.twitterId;
+    }
     [self registerForKeyboardNotifications];
 }
 

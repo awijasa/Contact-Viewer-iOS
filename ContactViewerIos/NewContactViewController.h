@@ -35,4 +35,6 @@
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
 
+@property BOOL isEdit;
+
 @end

@@ -7,7 +7,8 @@
 //
 
 #import "DetailViewController.h"
-
+#import "AppDelegate.h"
+#import "NewContactViewController.h"
 /*
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -24,8 +25,27 @@
 @synthesize emailTextField = _emailTextField;
 @synthesize twitterIDTextField = _twitterIDTextField;
 @synthesize masterPopoverController = _masterPopoverController;
+@synthesize managedObjectContext;
+@synthesize editContactViewController;
+//@synthesize storyBoard;
 
 #pragma mark - Managing the detail item
+
+- (IBAction)delete:(id)sender {
+
+    if(managedObjectContext == nil)
+    {
+        managedObjectContext = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];    
+    }
+    
+    NSManagedObject *contactToDelete = _detailItem;
+    [managedObjectContext deleteObject:contactToDelete];
+    
+    NSError *error = nil;
+    if (![managedObjectContext save:&error]) {
+        // Handle the error.
+    }
+}
 
 - (void)setDetailItem:(ContactEntity*)newDetailItem
 {
@@ -64,9 +84,32 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+    
+    
+    //[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    
+    self.navigationController.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(Add)] autoContentAccessingProxy ];
+    
+    
+    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:@"editSegue"])
+        {
+            editContactViewController = [segue destinationViewController];
+            editContactViewController.contact = _detailItem;
+            editContactViewController.isEdit = true;
+        }
+}
+
+-(IBAction)Add:(id)sender
+{
+    self.nameLabel.userInteractionEnabled = TRUE;
+    [self.nameLabel becomeFirstResponder];
 }
 
 - (void)viewDidUnload
